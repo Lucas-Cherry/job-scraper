@@ -6,7 +6,7 @@
 std::ofstream oferty("oferty_pracy.csv"); //Plik csv do ktorego trafia linki do ofert pracy
 
 std::string extract_html() { //Zdobywa zawartosc storny w string za pomoca cpr
-	cpr::Url adres = cpr::Url{ "https://www.pracuj.pl/praca/bialystok;wp?rd=30&cc=5015%2C5016&et=17&tc=0" };
+	cpr::Url adres = cpr::Url{ "https://www.pracuj.pl/praca/bialystok;wp?rd=30&cc=5015%2C5016&et=17&tc=0" }; //Link for the job site goes here (currently only supports pracuj.pl)
 	cpr::Response odpowiedz = cpr::Get(adres);
 	return odpowiedz.text;
 }
